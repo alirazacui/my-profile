@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Raza - Django Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c10;
+            color: #c5c6c7;
+        }
+
+        header {
+            background: #1f2833;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #66fcf1;
+            opacity: 0;
+        }
+
+        .skills {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 25px;
+        }
+
+        nav ul li a {
+            color: #66fcf1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #45a29e;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: #1f2833;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: #0b0c10;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            width: 280px;
+            color: white;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #1f2833;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="profile-pic" src="profile.jpg" alt="Ali Raza">
+        <h1>Ali Raza</h1>
+        <p class="skills">Django Developer | Web Development | MySQL | front-end devolper  |  </p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#Resume">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I’m Ali Raza, a skilled Django developer with a strong background in web development and MySQL database management I have experience building scalable web applications for various industries, including school management systems, airline management, and movie ticket booking systems. I specialize in creating custom Django models, multi-app architecture, and seamless user interfaces.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project-card" onclick="window.open('https://github.com/alirazacui', '_blank')">
+                <img src="logo.png" alt="School Management System">
+                <h3>School Management System</h3>
+            </div>
+            <div class="project-card" onclick="window.open('https://github.com/alirazacui', '_blank')">
+                <img src="admin_dashboard.JPG" alt="Airline Management System">
+                <h3>Airline Management System</h3>
+            </div>
+            <div class="project-card" onclick="window.open('https://github.com/alirazacui', '_blank')">
+                <img src="movie.png" alt="Movie Ticket System">
+                <h3>Movie Ticket System</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:alirazacui31@gmail.com" style="color: #66fcf1; text-decoration: none;">alirazacui31@gmail.com</a></p>
+<p>Phone: <a href="tel:+923150498017" style="color: #66fcf1; text-decoration: none;">03150498017</a></p>
+<p>GitHub: <a href="https://github.com/alirazacui" target="_blank" style="color: #66fcf1; text-decoration: none;">https://github.com/alirazacui</a></p>
+    </section>
+
+        <section id="resume">
+        <a onclick="downloadfile()" style="cursor: pointer; color: #66fcf1; text-decoration: underline;">Download Resume</a>
+       </section
+       <footer> 
+
+        <p>&copy; 2025 Ali Raza. All rights reserved.</p>
+    </footer>
+
+    <script>
+        gsap.to("#profile-pic", { duration: 1.5, opacity: 1, y: 0, ease: "power2.out", delay: 0.5 });
+        gsap.to(".skills", { duration: 1.5, opacity: 1, y: 0, ease: "power2.out", delay: 0.5 });
+
+        function downloadfile() {
+            window.location.href = "resume.pdf"; 
+        }
+        
+    </script>
+</body>
+</html>
